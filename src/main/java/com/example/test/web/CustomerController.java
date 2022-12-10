@@ -66,8 +66,10 @@ public class CustomerController {
     public String editCustomers(Model model, Long id, HttpSession session){
         num = 2;
         session.setAttribute("info", 0);
-        Customer customer = customerRespository.findById(id).orElse(null); if(customer==null) throw new RuntimeException("Customer does not exist"); model.addAttribute("customer", customer);
-        return "editStudents";
+        Customer customer = customerRespository.findById(id).orElse(null);
+        if(customer==null) throw new RuntimeException("Customer does not exist");
+        model.addAttribute("customer", customer);
+        return "editCustomers";
     }
 
     @GetMapping(path = "/")

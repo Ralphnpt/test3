@@ -1,11 +1,12 @@
 package com.example.test.entities;
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
 
+import javax.persistence.Entity;
 import java.util.Date;
 @Data
 @AllArgsConstructor
